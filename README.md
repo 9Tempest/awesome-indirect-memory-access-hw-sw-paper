@@ -1,2 +1,24 @@
-# awesome-indirect-memory-access-hw-sw-paper
-This repo collects a list of papers that accelerate indirect memory access from software/hardware
+### Background and Motivation
+Indirect memory accesses arise in many emerging and important domains, including sparse deep learning, graph analytics, database processing and scientific computing.
+They became a bottleneck in the performance of modern computer systems because the indirect patterns are hard to predict and prefetch. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.
+We have categorized related papers into two categories: Software-based and Hardware-based solutions.
+### Software-based Solutions
+- [Ainsworth, Sam, and Timothy M. Jones. "Software prefetching for indirect memory accesses." 2017 IEEE/ACM International Symposium on Code Generation and Optimization (CGO). IEEE, 2017.](https://ieeexplore.ieee.org/abstract/document/7863749) (Citations: 72) - Data Structure
+- [Kiriansky, Vladimir, Yunming Zhang, and Saman Amarasinghe. "Optimizing indirect memory references with milk." Proceedings of the 2016 International Conference on Parallel Architectures and Compilation. 2016.](https://dl.acm.org/doi/abs/10.1145/2967938.2967948) (Citations: 45) - Prefetch
+
+### Hardware-based Solutions
+- [Parashar, Angshuman, et al. "SCNN: An accelerator for compressed-sparse convolutional neural networks." ACM SIGARCH computer architecture news 45.2 (2017): 27-40.](https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/3140659.3080254&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=2079237226260863420&ei=phpuZvmHJvSz6rQP--ivkAo&scisig=AFWwaebq5MhqS45UpC9CCpadPk8Z) (Citations: 1368) - compressed sparse convolutional neural networks by directly embedding knowledge of the data structure format into the accelerator
+- [Ham, Tae Jun, et al. "Graphicionado: A high-performance and energy-efficient accelerator for graph analytics." 2016 49th annual IEEE/ACM international symposium on microarchitecture (MICRO). IEEE, 2016.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7783759) (Citations: 412) - graph accelerator using pipelining
+- [Wu, Lisa, et al. "Q100: The architecture and design of a database processing unit." ACM SIGARCH Computer Architecture News 42.1 (2014): 255-268.](https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/2654822.2541961&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=10563399759704159940&ei=QRtuZtnZOdiu6rQP6IuPmAg&scisig=AFWwaeaS-TMfgZXchU13f5X2h4nq) (Citations: 235) - spatial accelerator for DB
+- [Zhang, Guowei, et al. "Gamma: Leveraging Gustavson’s algorithm to accelerate sparse matrix multiplication." Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems. 2021.](https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/3445814.3446702&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=14689372674931419537&ei=dhtuZtrqEJWx6rQPkceYmAs&scisig=AFWwaeZ-VHJ-P9Sv3l6WnspsRpKh) (Citations: 92) - spatial accelerator for Sparse Linalg
+- [Srivastava, Nitish, et al. "Matraptor: A sparse-sparse matrix multiplication accelerator based on row-wise product." 2020 53rd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO). IEEE, 2020.](https://scholar.google.com/scholar_url?url=https://ieeexplore.ieee.org/iel7/9251289/9251849/09251978.pdf&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=8740208171413852046&ei=nhtuZvzmII3A6rQPjqSPmAY&scisig=AFWwaeZcHFVwBWNHjpTmYRYx0qZ3) (Citations: 188) - spatial accelerator for Sparse Linalg
+
+### Software Hardware Co-design Solutions
+- [Cavus, Mustafa, Resit Sendag, and Joshua J. Yi. "Informed prefetching for indirect memory accesses." ACM Transactions on Architecture and Code Optimization (TACO) 17.1 (2020): 1-29.](https://dl.acm.org/doi/abs/10.1145/3374216) (Citations: 13) - Prefetch
+- [Talati, Nishil, et al. "Prodigy: Improving the memory latency of data-indirect irregular workloads using hardware-software co-design." 2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA). IEEE, 2021.](https://ieeexplore.ieee.org/abstract/document/9407222) (Citations: 60) - Prefetch Indirect
+- [Ainsworth, Sam, and Timothy M. Jones. "Graph prefetching using data structure knowledge." Proceedings of the 2016 International Conference on Supercomputing. 2016.](https://dl.acm.org/doi/abs/10.1145/2925426.2926254) (Citations: 85) - Prefetch BFS
+- [Ainsworth, Sam, and Timothy M. Jones. "An event-triggered programmable prefetcher for irregular workloads." ACM Sigplan Notices 53.2 (2018): 578-592.](https://dl.acm.org/doi/pdf/10.1145/3296957.3173189) (Citations: 32) - Event-based Programmable Prefetcher
+
+### Conclusion
+Prefetcher: cons1: Redundant memory accesses and similar computations to the cores
+Prefetcher: cons2: If cannot prefetch correctly, will pollute the cache
