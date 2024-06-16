@@ -3,7 +3,7 @@ Indirect memory accesses arise in many emerging and important domains, including
 They became a bottleneck in the performance of modern computer systems because (1)the indirect patterns are hard to predict and (2) memory hierarchy is optimized for sequential accesses,often at the expense of random accesses. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.
 We have categorized related papers into three categories: Prefetch-based Solutions, Fetcher-based Solutions, and Other Solutions.
 
-### Prefetch-based Solutions
+### Prefetch-based Solutions(A unit predicts and fetches the core's access; core fetches data and executes, but highly likely that data has been fetched by prefetcher)
 - [Ainsworth, Sam, and Timothy M. Jones. "Software prefetching for indirect memory accesses." 2017 IEEE/ACM International Symposium on Code Generation and Optimization (CGO). IEEE, 2017.](https://ieeexplore.ieee.org/abstract/document/7863749) (Citations: 72) - Data Structure
 - [Ainsworth, Sam, and Timothy M. Jones. "Graph prefetching using data structure knowledge." Proceedings of the 2016 International Conference on Supercomputing. 2016.](https://dl.acm.org/doi/abs/10.1145/2925426.2926254) (Citations: 85) - Prefetch BFS using information about application's data structure
 - [Ainsworth, Sam, and Timothy M. Jones. "An event-triggered programmable prefetcher for irregular workloads." ACM Sigplan Notices 53.2 (2018): 578-592.](https://dl.acm.org/doi/pdf/10.1145/3296957.3173189) (Citations: 32) - Event-based Programmable Prefetcher
@@ -12,7 +12,7 @@ We have categorized related papers into three categories: Prefetch-based Solutio
 - [Basak, Abanti, et al. "Analysis and optimization of the memory hierarchy for graph processing workloads." 2019 IEEE International Symposium on High Performance Computer Architecture (HPCA). IEEE, 2019.](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8675225) (Citations: 88) - Prefetch and analysis of memory level parallelism
 - [Yu, Xiangyao, et al. "IMP: Indirect memory prefetcher." Proceedings of the 48th International Symposium on Microarchitecture. 2015.](https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/2830772.2830807&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=4440176624741026881&ei=3-tuZvP2FoaM6rQPpe-zqAs&scisig=AFWwaeZ-3V-E2ZHJ6eT77HM2SxS3) (Citations: 181)
 
-### Fetcher-based Solutions
+### Fetcher-based Solutions(The core specifies a unit to fetch data; core grabs data from the fetcher and executes)
 - [Mukkara, Anurag, et al. "Exploiting locality in graph analytics through hardware-accelerated traversal scheduling." 2018 51st Annual IEEE/ACM International Symposium on Microarchitecture (MICRO). IEEE, 2018.](https://ieeexplore.ieee.org/abstract/document/8574527) (Citations: 148) - Decoupled access-execute by bounded DFS scheduling
 - [Kocberber, Onur, et al. "Meet the walkers: Accelerating index traversals for in-memory databases." Proceedings of the 46th Annual IEEE/ACM International Symposium on Microarchitecture. 2013.](https://dl.acm.org/doi/abs/10.1145/2540708.2540748) (Citations: 264) - Fetcher for database hash lookups
 - [Kumar, Snehasish, et al. "SQRL: Hardware accelerator for collecting software data structures." Proceedings of the 23rd international conference on Parallel architectures and compilation. 2014.](https://dl.acm.org/doi/abs/10.1145/2628071.2628118) (Citations: 28)
