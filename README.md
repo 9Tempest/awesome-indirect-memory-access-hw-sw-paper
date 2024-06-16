@@ -1,7 +1,7 @@
 ### Background and Motivation
 Indirect memory accesses arise in many emerging and important domains, including sparse deep learning, graph analytics, database processing and scientific computing.
-They became a bottleneck in the performance of modern computer systems because the indirect patterns are hard to predict and prefetch. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.
-We have categorized related papers into two categories: Software-based and Hardware-based solutions.
+They became a bottleneck in the performance of modern computer systems because (1)the indirect patterns are hard to predict and (2) memory hierarchy is optimized for sequential accesses,often at the expense of random accesses. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.
+We have categorized related papers into three categories: Prefetch-based Solutions, Domain-specific Solutions, and General-purposed Solutions.
 ### Prefetch-based Solutions
 - [Ainsworth, Sam, and Timothy M. Jones. "Software prefetching for indirect memory accesses." 2017 IEEE/ACM International Symposium on Code Generation and Optimization (CGO). IEEE, 2017.](https://ieeexplore.ieee.org/abstract/document/7863749) (Citations: 72) - Data Structure
 - [Ainsworth, Sam, and Timothy M. Jones. "Graph prefetching using data structure knowledge." Proceedings of the 2016 International Conference on Supercomputing. 2016.](https://dl.acm.org/doi/abs/10.1145/2925426.2926254) (Citations: 85) - Prefetch BFS using information about application's data structure
@@ -13,9 +13,8 @@ We have categorized related papers into two categories: Software-based and Hardw
 - [Mukkara, Anurag, et al. "Exploiting locality in graph analytics through hardware-accelerated traversal scheduling." 2018 51st Annual IEEE/ACM International Symposium on Microarchitecture (MICRO). IEEE, 2018.](https://ieeexplore.ieee.org/abstract/document/8574527) (Citations: 148) - Decoupled access-execute by bounded DFS scheduling
 
 ### Comments on Prefetch-based Solutions
-Cons1: Redundant memory accesses and similar computations to the cores
-
-Cons2: If cannot prefetch correctly, will pollute the cache
+* Cons1: Redundant memory accesses and similar computations to the cores
+* Cons2: If cannot prefetch correctly, will pollute the cache
 ### Domain-specific Solutions
 - [Parashar, Angshuman, et al. "SCNN: An accelerator for compressed-sparse convolutional neural networks." ACM SIGARCH computer architecture news 45.2 (2017): 27-40.](https://scholar.google.com/scholar_url?url=https://dl.acm.org/doi/pdf/10.1145/3140659.3080254&hl=en&sa=T&oi=gsr-r-gga&ct=res&cd=0&d=2079237226260863420&ei=phpuZvmHJvSz6rQP--ivkAo&scisig=AFWwaebq5MhqS45UpC9CCpadPk8Z) (Citations: 1368) - compressed sparse convolutional neural networks by directly embedding knowledge of the data structure format into the accelerator
 - [Ham, Tae Jun, et al. "Graphicionado: A high-performance and energy-efficient accelerator for graph analytics." 2016 49th annual IEEE/ACM international symposium on microarchitecture (MICRO). IEEE, 2016.](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7783759) (Citations: 412) - graph accelerator using pipelining
