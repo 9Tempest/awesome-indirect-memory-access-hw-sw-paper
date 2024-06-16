@@ -1,7 +1,7 @@
 ### Background and Motivation
 Indirect memory accesses arise in many emerging and important domains, including sparse deep learning, graph analytics, database processing and scientific computing.
 They became a bottleneck in the performance of modern computer systems because (1)the indirect patterns are hard to predict and (2) memory hierarchy is optimized for sequential accesses,often at the expense of random accesses. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.
-We have categorized related papers into three categories: Prefetch-based Solutions, Domain-specific Solutions, and General-purposed Solutions.
+We have categorized related papers into three categories: Prefetch-based Solutions, Fetcher-based Solutions, and Other Solutions.
 
 ### Prefetch-based Solutions
 - [Ainsworth, Sam, and Timothy M. Jones. "Software prefetching for indirect memory accesses." 2017 IEEE/ACM International Symposium on Code Generation and Optimization (CGO). IEEE, 2017.](https://ieeexplore.ieee.org/abstract/document/7863749) (Citations: 72) - Data Structure
