@@ -29,12 +29,12 @@ input_file = 'prefetch.txt'
 markdown_output = process_input_file(input_file)
 print(markdown_output)
 
-print("### Domain-specific Solutions")
-input_file = 'domainspecific.txt' 
+print("### Fetcher-based Solutions")
+input_file = 'fetcher.txt' 
 markdown_output = process_input_file(input_file)
 print(markdown_output)
-print("### General-purposed Solutions")
-input_file = 'general.txt'
+print("### Others Solutions")
+input_file = 'others.txt'
 markdown_output = process_input_file(input_file)
 print(markdown_output)
 
