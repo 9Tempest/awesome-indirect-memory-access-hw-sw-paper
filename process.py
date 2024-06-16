@@ -28,19 +28,22 @@ print("### Background and Motivation")
 print("Indirect memory accesses arise in many emerging and important domains, including sparse deep learning, graph analytics, database processing and scientific computing.")
 print("They became a bottleneck in the performance of modern computer systems because the indirect patterns are hard to predict and prefetch. Those indirect memory accesses will cause a large number of cache misses and memory stalls, which will significantly degrade the performance of the system.")
 print("We have categorized related papers into two categories: Software-based and Hardware-based solutions.")
-print("### Software-based Solutions")
-input_file = 'software.txt' 
+print("### Prefetch-based Solutions")
+input_file = 'prefetch.txt' 
 markdown_output = process_input_file(input_file)
 print(markdown_output)
-print("### Hardware-based Solutions")
-input_file = 'hardware.txt' 
+print("### Comments on Prefetch-based Solutions")
+print("Cons1: Redundant memory accesses and similar computations to the cores")
+print("")
+print("Cons2: If cannot prefetch correctly, will pollute the cache")
+
+print("### Domain-specific Solutions")
+input_file = 'domainspecific.txt' 
 markdown_output = process_input_file(input_file)
 print(markdown_output)
-print("### Software Hardware Co-design Solutions")
-input_file = 'sw-hw.txt'
+print("### General-purposed Solutions")
+input_file = 'general.txt'
 markdown_output = process_input_file(input_file)
 print(markdown_output)
 
-print("### Conclusion")
-print("Prefetcher: cons1: Redundant memory accesses and similar computations to the cores")
-print("Prefetcher: cons2: If cannot prefetch correctly, will pollute the cache")
+
