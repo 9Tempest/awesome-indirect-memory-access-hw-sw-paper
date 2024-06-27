@@ -33,8 +33,8 @@ print("### Fetcher-based Solutions")
 input_file = 'fetcher.txt' 
 markdown_output = process_input_file(input_file)
 print(markdown_output)
-print("### Others Solutions")
-input_file = 'others.txt'
+print("### Compiler-based Solutions")
+input_file = 'compiler.txt'
 markdown_output = process_input_file(input_file)
 print(markdown_output)
 
